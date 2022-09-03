@@ -1,4 +1,4 @@
-package algorithems;
+package Algorithms;
 
 import models.Node;
 import models.State;
@@ -26,14 +26,12 @@ public class RBFS {
             return new Result(true, node);
         }
         Queue<Node> fringe = new PriorityQueue<>();
-//        Queue<Node> temp = new PriorityQueue<>();
 
         for (State child : node.getState().makeChild()) {
             Node t = new Node(child, node.getGn() + 1);
             t.setFn(Math.max(t.getFn(), node.getFn()));
             fringe.add(t);
         }
-//        fringe.add(temp.poll());
 
         if (fringe.isEmpty()) {
             return new Result(false, null);
@@ -52,7 +50,6 @@ public class RBFS {
                 return res;
             }
             fringe.add(res.node);
-//            System.out.println();
         }
         return null;
 

@@ -1,4 +1,4 @@
-package algorithems;
+package Algorithms;
 import models.State;
 import java.util.LinkedList;
 import java.util.Queue;

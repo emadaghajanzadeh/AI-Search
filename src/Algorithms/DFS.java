@@ -1,4 +1,4 @@
-package algorithems;
+package Algorithms;
 
 import models.State;
 
